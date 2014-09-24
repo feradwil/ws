@@ -1,7 +1,7 @@
 <?php
 
 //1.koneksi database
-$konek = mysql_connect("localhost","root",""));
+$konek = mysql_connect("127.0.0.1","root","") or die (mysql_error());
 $db = mysql_select_db("mahasiswa2");
 
 if ($konek) {
