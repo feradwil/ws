@@ -22,7 +22,7 @@ function login_ws($username, $password){
 	$password = md5($password);
 	//buat koneksi
 	$db = NewADOConnection('mysql');
-	$db -> Connect('localhost','root','','data_mahasiswa');
+	$db -> Connect('localhost','root','','user');
 //cek username dan password dari database
 	$sql  =  $db  ->  Execute("SELECT  *  FROM  user  where 
 	username='$username'  AND
