@@ -1,6 +1,9 @@
 <?php
   require_once 'nusoap/lib/nusoap.php';
   require_once 'adodb/adodb.inc.php';
+  
+  $db = NewADOConnection('mysql');
+ 
   $server = new nusoap_server();
   $server->configureWSDL('server','urn:server');
   $server->wsdl->schemaTargetNamespace = 'urn:server';
