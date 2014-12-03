@@ -2,7 +2,7 @@
 require_once('nusoap.php');
 $param = array('getCountiesByList' => $getCountiesByList);
 $client = new
-soapclient('http://localhost/ws.git/kuis2/server.php');
+soapclient(' http://api.radioreference.com/soap2/?wsdl&v=latest');
 $response = $client->call('getCountiesByList', $param);
 if ($client->fault) {
 echo "FAULT:<br>";
