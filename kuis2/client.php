@@ -1,9 +1,9 @@
 <?
 require_once('nusoap.php');
-$param = array('countryname' => $countryname);
+$param = array('getCountiesByList' => $getCountiesByList);
 $client = new
 soapclient('http://localhost/ws.git/kuis2/server.php');
-$response = $client->call('CountryName', $param);
+$response = $client->call('getCountiesByList', $param);
 if ($client->fault) {
 echo "FAULT:<br>";
 echo "Code: { $client->faultcode }<br>";5
